@@ -7,9 +7,14 @@
 
 import SwiftUI
 
+private let programmers:[Programmer] = [Programmer(id: 1, name: "Agustin Carbajal", languajes: "RN", avatar: Image(systemName: "person.fill")), Programmer(id: 2, name: "Juan Boca", languajes: "RN", avatar: Image(systemName: "person.fill")), Programmer(id: 3, name: "Carlos Rivera", languajes: "RN", avatar: Image(systemName: "person.fill")), Programmer(id: 4, name: "Miguel Carbajal", languajes: "RN", avatar: Image(systemName: "person.fill")), Programmer(id: 5, name: "Claudio Carbajal", languajes: "RN", avatar: Image(systemName: "person.fill"))]
+
 struct ListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(programmers, id: \.id){
+            programmer in
+            RowView(programmer: programmer)
+        }
     }
 }
 

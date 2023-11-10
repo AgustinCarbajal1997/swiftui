@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import SwiftUI // para poder importar el objeto Image
+struct Programmer {
+    var id: Int
+    var name: String
+    var languajes: String
+    var avatar: Image
+}
