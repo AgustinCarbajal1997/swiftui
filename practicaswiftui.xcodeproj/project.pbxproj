@@ -14,6 +14,7 @@
 		9FCDB96B2AFD9B1500D46E54 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDB96A2AFD9B1500D46E54 /* Persistence.swift */; };
 		9FCDB96E2AFD9B1500D46E54 /* practicaswiftui.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDB96C2AFD9B1500D46E54 /* practicaswiftui.xcdatamodeld */; };
 		9FCDB9752AFDA57800D46E54 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDB9742AFDA57800D46E54 /* ImageView.swift */; };
+		9FCDB9772AFDAF2B00D46E54 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDB9762AFDAF2B00D46E54 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		9FCDB96A2AFD9B1500D46E54 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		9FCDB96D2AFD9B1500D46E54 /* practicaswiftui.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = practicaswiftui.xcdatamodel; sourceTree = "<group>"; };
 		9FCDB9742AFDA57800D46E54 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		9FCDB9762AFDAF2B00D46E54 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				9FCDB96A2AFD9B1500D46E54 /* Persistence.swift */,
 				9FCDB96C2AFD9B1500D46E54 /* practicaswiftui.xcdatamodeld */,
 				9FCDB9672AFD9B1500D46E54 /* Preview Content */,
+				9FCDB9762AFDAF2B00D46E54 /* MapView.swift */,
 			);
 			path = practicaswiftui;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FCDB9752AFDA57800D46E54 /* ImageView.swift in Sources */,
+				9FCDB9772AFDAF2B00D46E54 /* MapView.swift in Sources */,
 				9FCDB96B2AFD9B1500D46E54 /* Persistence.swift in Sources */,
 				9FCDB9642AFD9B1300D46E54 /* ContentView.swift in Sources */,
 				9FCDB96E2AFD9B1500D46E54 /* practicaswiftui.xcdatamodeld in Sources */,
