@@ -7,13 +7,18 @@
 
 import SwiftUI
 
-private let programmers:[Programmer] = [Programmer(id: 1, name: "Agustin Carbajal", languajes: "RN", avatar: Image(systemName: "person.fill"), isStarred: true), Programmer(id: 2, name: "Juan Boca", languajes: "RN", avatar: Image(systemName: "person.fill"), isStarred: false), Programmer(id: 3, name: "Carlos Rivera", languajes: "RN", avatar: Image(systemName: "person.fill"), isStarred: false), Programmer(id: 4, name: "Miguel Carbajal", languajes: "RN", avatar: Image(systemName: "person.fill"), isStarred: false), Programmer(id: 5, name: "Claudio Carbajal", languajes: "RN", avatar: Image(systemName: "person.fill"), isStarred: true)]
+final class ProgrammersModelData: ObservableObject {
+    @Published var programmers:[Programmer] = [Programmer(id: 0, name: "Agustin Carbajal", languajes: "RN", avatar: Image(systemName: "person.fill"), isStarred: true), Programmer(id: 1, name: "Juan Boca", languajes: "RN", avatar: Image(systemName: "person.fill"), isStarred: false), Programmer(id: 2, name: "Carlos Rivera", languajes: "RN", avatar: Image(systemName: "person.fill"), isStarred: false), Programmer(id: 3, name: "Miguel Carbajal", languajes: "RN", avatar: Image(systemName: "person.fill"), isStarred: false), Programmer(id: 4, name: "Claudio Carbajal", languajes: "RN", avatar: Image(systemName: "person.fill"), isStarred: true)]
+}
+
+ 
 
 struct ListView: View {
     
+    @EnvironmentObject var programmersModelData: ProgrammersModelData
     @State private var showFavorites: Bool = false
     private var filteredProgrammers: [Programmer] {
-        return programmers.filter {
+        return programmersModelData.programmers.filter {
             programmer in
             return !showFavorites || programmer.isStarred
         }
@@ -21,19 +26,20 @@ struct ListView: View {
     
     var body: some View {
         // se agrega el simbolo $ para que pueda acceder al valor de forma mutable
+        NavigationView {
         VStack {
             Toggle(isOn: $showFavorites){
                 Text("Mostrar Favoritos")}.padding()
-            NavigationView {
+            
                 List(filteredProgrammers, id: \.id) {
                     programmer in
-                    NavigationLink(destination: ListDetailView(programmer: programmer)) {
+                    NavigationLink(destination: ListDetailView(programmer: programmer, isStarred: $programmersModelData.programmers[programmer.id].isStarred)) {
                         RowView(programmer: programmer)
                     
                     }
                 }
-                .navigationTitle("Programadores")
-            }
+                
+            }.navigationTitle("Programadores")
         }
         
     }
@@ -41,6 +47,6 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView()
+        ListView().environmentObject(ProgrammersModelData())
     }
 }
