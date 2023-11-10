@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct EnvironmentView: View {
+    
+    @EnvironmentObject var user: UserData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(user.name)
     }
 }
 
 struct EnvironmentView_Previews: PreviewProvider {
     static var previews: some View {
-        EnvironmentView()
+        EnvironmentView().environmentObject(UserData())
     }
 }
