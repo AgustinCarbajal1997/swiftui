@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ImageView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image("ferrari").scaledToFit().frame(width: 300).clipShape(Circle()).overlay(Circle().stroke(Color.blue, lineWidth: 4)).shadow(color: .gray, radius: 25)
+            Image(systemName: "person.fill.badge.minus").resizable().frame(width: 200, height: 200).foregroundColor(.red)
+        }
     }
 }
 
