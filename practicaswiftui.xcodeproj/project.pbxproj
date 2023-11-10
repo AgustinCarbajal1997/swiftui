@@ -15,6 +15,7 @@
 		9FCDB96E2AFD9B1500D46E54 /* practicaswiftui.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDB96C2AFD9B1500D46E54 /* practicaswiftui.xcdatamodeld */; };
 		9FCDB9752AFDA57800D46E54 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDB9742AFDA57800D46E54 /* ImageView.swift */; };
 		9FCDB9772AFDAF2B00D46E54 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDB9762AFDAF2B00D46E54 /* MapView.swift */; };
+		9FCDB9792AFDB36400D46E54 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDB9782AFDB36400D46E54 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		9FCDB96D2AFD9B1500D46E54 /* practicaswiftui.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = practicaswiftui.xcdatamodel; sourceTree = "<group>"; };
 		9FCDB9742AFDA57800D46E54 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		9FCDB9762AFDAF2B00D46E54 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		9FCDB9782AFDB36400D46E54 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				9FCDB9612AFD9B1300D46E54 /* practicaswiftuiApp.swift */,
 				9FCDB9632AFD9B1300D46E54 /* ContentView.swift */,
 				9FCDB9742AFDA57800D46E54 /* ImageView.swift */,
+				9FCDB9782AFDB36400D46E54 /* MainView.swift */,
 				9FCDB9652AFD9B1500D46E54 /* Assets.xcassets */,
 				9FCDB96A2AFD9B1500D46E54 /* Persistence.swift */,
 				9FCDB96C2AFD9B1500D46E54 /* practicaswiftui.xcdatamodeld */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FCDB9752AFDA57800D46E54 /* ImageView.swift in Sources */,
+				9FCDB9792AFDB36400D46E54 /* MainView.swift in Sources */,
 				9FCDB9772AFDAF2B00D46E54 /* MapView.swift in Sources */,
 				9FCDB96B2AFD9B1500D46E54 /* Persistence.swift in Sources */,
 				9FCDB9642AFD9B1300D46E54 /* ContentView.swift in Sources */,
