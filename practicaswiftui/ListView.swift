@@ -11,9 +11,15 @@ private let programmers:[Programmer] = [Programmer(id: 1, name: "Agustin Carbaja
 
 struct ListView: View {
     var body: some View {
-        List(programmers, id: \.id){
-            programmer in
-            RowView(programmer: programmer)
+        NavigationView {
+            List(programmers, id: \.id) {
+                programmer in
+                NavigationLink(destination: ListDetailView(programmer: programmer)) {
+                    RowView(programmer: programmer)
+                
+                }
+            }
+            .navigationTitle("Programadores")
         }
     }
 }
